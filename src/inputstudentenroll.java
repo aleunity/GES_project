@@ -1,5 +1,8 @@
 
+import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -13,14 +16,26 @@ import javax.swing.table.DefaultTableModel;
  * @author Christopher Lawrence
  */
 public class inputstudentenroll extends javax.swing.JInternalFrame {
-
+    
+    File f = new File("f:\\e files\\GES");
+    
     /**
      * Creates new form inputstudentenroll
      */
     public inputstudentenroll() {
         initComponents();
     }
+    
+    private void saveToFile(String student_name, String student_number, String year_level, String department) {
+        try (var writer = new BufferedWriter(new FileWriter("GES_Student_enroll_info.txt", true))) {
+            writer.write(student_name + "," + student_number  + "," +  year_level + "," + department  + "," );
+            writer.newLine();
 
+            JOptionPane.showMessageDialog(this, "success");
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(this, "Something went wrong!", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -204,18 +219,20 @@ public class inputstudentenroll extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_dept_textActionPerformed
 
     private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
+
         String student_name = s_name_text.getText();
         String student_number = s_number_int.getText();
         String year_level = y_level_text.getText();
         String department = dept_text.getText();
-
-        try{
-            if(student_name.isEmpty() || student_number.isEmpty() || year_level.isEmpty() || department.isEmpty()){
-                JOptionPane.showMessageDialog(this,
-                    "Please Enter all the fields",
-                    "Try again",
-                    JOptionPane.ERROR_MESSAGE);
-            } else {
+        saveToFile(student_name, student_number, year_level, department);
+        
+        if(student_name.isEmpty() || student_number.isEmpty() || year_level.isEmpty() || department.isEmpty()){
+            JOptionPane.showMessageDialog(this,
+                "Please Enter all the fields",
+                "Try again",
+                JOptionPane.ERROR_MESSAGE);
+        } else {
+            try {
                 DefaultTableModel tblModel = (DefaultTableModel)studentlist.getModel();
                 tblModel.addRow(new Object[] {student_name, student_number, year_level, department});
 
@@ -223,16 +240,12 @@ public class inputstudentenroll extends javax.swing.JInternalFrame {
                 s_number_int.setText("");
                 y_level_text.setText("");
                 dept_text.setText("");
-            }
-
-            FileWriter writer = new FileWriter("C:\\Users\\Christopher Lawrence\\Documents\\GitHub\\GES_project/enrolledstudentinput.txt", true);
-            writer.write(""+student_name+", "+student_number+", "+year_level+", "+department+"");
-            writer.write(System.getProperty("line.seperator"));
-            writer.close();
-            JOptionPane.showMessageDialog(null, "Success");
-            setVisible(false);
-            new inputstudentenroll().setVisible(true);
-        } catch(Exception e){
+             } catch (NumberFormatException e){
+                 JOptionPane.showConfirmDialog(this, 
+                         "Please enter valid numerical values in student number!",
+                         "Invalid Input.", JOptionPane.ERROR_MESSAGE);
+             
+             }
         }
 
     }//GEN-LAST:event_saveActionPerformed

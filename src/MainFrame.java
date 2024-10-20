@@ -14,7 +14,9 @@ public class MainFrame extends javax.swing.JFrame {
      */
     public MainFrame() {
         initComponents();
-        
+        main_desktop.removeAll();
+        Main_Window_pic enrollstudentI = new Main_Window_pic();
+        main_desktop.add(enrollstudentI).setVisible(true);
         
     }
 
@@ -156,7 +158,9 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_student_gradeActionPerformed
 
     private void grade_encodingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grade_encodingActionPerformed
-       
+        main_desktop.removeAll();
+        studentgradeinput enrollstudentI = new studentgradeinput();
+        main_desktop.add(enrollstudentI).setVisible(true);
     }//GEN-LAST:event_grade_encodingActionPerformed
 
     private void enroll_studentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enroll_studentActionPerformed

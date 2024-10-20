@@ -100,8 +100,16 @@ public class Sign extends javax.swing.JFrame ;
         jLabel14.setText("PASSWORD:");
 
 
+
         pangalan.setBackground(new java.awt.Color(155, 193, 250));
         pangalan.addActionListener(new java.awt.event.ActionListener());
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+
+
+
+        pangalan.setBackground(new java.awt.Color(155, 193, 250));
+        pangalan.addActionListener(new java.awt.event.ActionListener() {
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
 
@@ -111,8 +119,15 @@ public class Sign extends javax.swing.JFrame ;
         });
 
 
+
         coe.setBackground(new java.awt.Color(155, 193, 250));
         coe.addActionListener(new java.awt.event.ActionListener());
+
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+
+
+        coe.setBackground(new java.awt.Color(155, 193, 250));
+        coe.addActionListener(new java.awt.event.ActionListener() {
 
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
 
@@ -142,8 +157,16 @@ public class Sign extends javax.swing.JFrame ;
         });
 
 
+
         facult.setBackground(new java.awt.Color(155, 193, 250));
         facult.addActionListener(new java.awt.event.ActionListener());
+
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+
+
+
+        facult.setBackground(new java.awt.Color(155, 193, 250));
+        facult.addActionListener(new java.awt.event.ActionListener() {
 
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
 
@@ -153,8 +176,16 @@ public class Sign extends javax.swing.JFrame ;
         });
 
 
+
         date.setBackground(new java.awt.Color(155, 193, 250));
         date.addActionListener(new java.awt.event.ActionListener());
+
+        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+
+
+
+        date.setBackground(new java.awt.Color(155, 193, 250));
+        date.addActionListener(new java.awt.event.ActionListener() {
 
         jTextField6.addActionListener(new java.awt.event.ActionListener() {
 
@@ -164,8 +195,16 @@ public class Sign extends javax.swing.JFrame ;
         });
 
 
+
         email1.setBackground(new java.awt.Color(155, 193, 250));
         email1.addActionListener(new java.awt.event.ActionListener()) {
+
+        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+
+
+
+        email1.setBackground(new java.awt.Color(155, 193, 250));
+        email1.addActionListener(new java.awt.event.ActionListener() {
 
         jTextField7.addActionListener(new java.awt.event.ActionListener() {
 
@@ -175,8 +214,16 @@ public class Sign extends javax.swing.JFrame ;
         });
 
 
+
         bahay.setBackground(new java.awt.Color(155, 193, 250));
         bahay.addActionListener(new java.awt.event.ActionListener());
+
+        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+
+
+
+        bahay.setBackground(new java.awt.Color(155, 193, 250));
+        bahay.addActionListener(new java.awt.event.ActionListener() {
 
         jTextField8.addActionListener(new java.awt.event.ActionListener() {
 
@@ -187,8 +234,16 @@ public class Sign extends javax.swing.JFrame ;
         });
 
 
+
         number.setBackground(new java.awt.Color(155, 193, 250));
         number.addActionListener(new java.awt.event.ActionListener()) {
+
+        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+
+
+
+        number.setBackground(new java.awt.Color(155, 193, 250));
+        number.addActionListener(new java.awt.event.ActionListener() {
 
         jTextField9.addActionListener(new java.awt.event.ActionListener() {
 
@@ -240,6 +295,9 @@ public class Sign extends javax.swing.JFrame ;
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
 
+
+
+
                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(pangalan, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -248,6 +306,8 @@ public class Sign extends javax.swing.JFrame ;
                         .addGap(6, 6, 6)
                         .addComponent(coe, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
 
+
+=
                         .addComponent(jLabel4)
                         .addGap(25, 25, 25)
                         .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -275,6 +335,7 @@ public class Sign extends javax.swing.JFrame ;
                         .addComponent(jLabel10)
                         .addGap(8, 8, 8)
                         .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
+
 
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -328,8 +389,13 @@ public class Sign extends javax.swing.JFrame ;
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(206, 206, 206))))
 
+
                             .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+
+                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+
                         .addGap(81, 81, 81)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel13)
@@ -337,7 +403,11 @@ public class Sign extends javax.swing.JFrame ;
                         .addGap(7, 7, 7)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+
                             .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
+
+                            .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))
+
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(34, 34, 34)
@@ -346,14 +416,24 @@ public class Sign extends javax.swing.JFrame ;
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(360, 360, 360)
+
                         .addComponent(jLabel16))
                 .addContainerGap(94, Short.MAX_VALUE)
+
+                        .addComponent(jLabel16)))
+                .addContainerGap(94, Short.MAX_VALUE))
+
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(322, 322, 322))
 
+
         };
+
+
+        );
+
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -411,6 +491,9 @@ public class Sign extends javax.swing.JFrame ;
                             .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
 
+
+                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+
                         .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
 
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -466,6 +549,7 @@ public class Sign extends javax.swing.JFrame ;
                 .addGap(41, 41, 41)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
 
                 .addContainerGap(84, Short.MAX_VALUE)
@@ -473,6 +557,15 @@ public class Sign extends javax.swing.JFrame ;
                 .addGap(28, 28, 28))
 
         ;
+
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+
+                .addContainerGap(84, Short.MAX_VALUE))
+
+                .addGap(28, 28, 28))
+
+        );
+
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -489,6 +582,9 @@ public class Sign extends javax.swing.JFrame ;
     }// </editor-fold>//GEN-END:initComponents
 
 
+
+
+
     private void coeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_coeActionPerformed
@@ -497,13 +593,13 @@ public class Sign extends javax.swing.JFrame ;
         // TODO add your handling code here:
     }//GEN-LAST:event_pangalanActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }                                           
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }                                           
 
     private void facultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_facultActionPerformed
         // TODO add your handling code here:
@@ -525,7 +621,7 @@ public class Sign extends javax.swing.JFrame ;
         // TODO add your handling code here:
     }//GEN-LAST:event_numberActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
        
         
         
@@ -534,6 +630,9 @@ public class Sign extends javax.swing.JFrame ;
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         String firstName = jTextField2.getText().trim();
+
+
+
         String middleName = jTextField3.getText().trim();
         String lastName = jTextField4.getText().trim();
         String department = coe.getText().trim();

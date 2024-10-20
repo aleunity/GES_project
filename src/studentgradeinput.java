@@ -1,4 +1,7 @@
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -18,6 +21,17 @@ public class studentgradeinput extends javax.swing.JInternalFrame {
      */
     public studentgradeinput() {
         initComponents();
+    }
+    
+    private void saveToFile(String name, String number, String quiz, String act, String lab, String exam) {
+        try (var writer = new BufferedWriter(new FileWriter("GES_Student_grade_info.txt", true))) {
+            writer.write(name + "," + number  + "," +  quiz + "," + act  + "," + lab + "," + exam );
+            writer.newLine();
+
+            JOptionPane.showMessageDialog(this, "success");
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(this, "Something went wrong!", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }
 
     /**
@@ -66,7 +80,7 @@ public class studentgradeinput extends javax.swing.JInternalFrame {
                 tfExamActionPerformed(evt);
             }
         });
-        jPanel4.add(tfExam, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, 190, 34));
+        jPanel4.add(tfExam, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, 180, 34));
 
         jLabel3.setFont(new java.awt.Font("Papyrus", 1, 18)); // NOI18N
         jLabel3.setText("Activity:");
@@ -78,7 +92,7 @@ public class studentgradeinput extends javax.swing.JInternalFrame {
                 tfNameActionPerformed(evt);
             }
         });
-        jPanel4.add(tfName, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 190, 34));
+        jPanel4.add(tfName, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 180, 34));
 
         jLabel4.setFont(new java.awt.Font("Papyrus", 1, 18)); // NOI18N
         jLabel4.setText("Name:");
@@ -90,7 +104,7 @@ public class studentgradeinput extends javax.swing.JInternalFrame {
                 tfStudentActionPerformed(evt);
             }
         });
-        jPanel4.add(tfStudent, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 190, 34));
+        jPanel4.add(tfStudent, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 180, 34));
 
         jLabel5.setFont(new java.awt.Font("Papyrus", 1, 18)); // NOI18N
         jLabel5.setText("Written Exam:");
@@ -114,7 +128,7 @@ public class studentgradeinput extends javax.swing.JInternalFrame {
                 tfQuizActionPerformed(evt);
             }
         });
-        jPanel4.add(tfQuiz, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 190, 34));
+        jPanel4.add(tfQuiz, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 180, 34));
 
         tfAct.setFont(new java.awt.Font("Papyrus", 0, 14)); // NOI18N
         tfAct.addActionListener(new java.awt.event.ActionListener() {
@@ -122,7 +136,7 @@ public class studentgradeinput extends javax.swing.JInternalFrame {
                 tfActActionPerformed(evt);
             }
         });
-        jPanel4.add(tfAct, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 190, 34));
+        jPanel4.add(tfAct, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 180, 34));
 
         tfLab.setFont(new java.awt.Font("Papyrus", 0, 14)); // NOI18N
         tfLab.addActionListener(new java.awt.event.ActionListener() {
@@ -130,7 +144,7 @@ public class studentgradeinput extends javax.swing.JInternalFrame {
                 tfLabActionPerformed(evt);
             }
         });
-        jPanel4.add(tfLab, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, 190, 34));
+        jPanel4.add(tfLab, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, 180, 34));
 
         btnAdd.setFont(new java.awt.Font("Salina", 1, 12)); // NOI18N
         btnAdd.setText("Add");
@@ -170,8 +184,8 @@ public class studentgradeinput extends javax.swing.JInternalFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 678, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -234,6 +248,7 @@ public class studentgradeinput extends javax.swing.JInternalFrame {
         String act = tfAct.getText();
         String lab = tfLab.getText();
         String exam = tfExam.getText();
+        saveToFile(name,number, quiz, act, lab, exam);
 
         if (name.isEmpty() || number.isEmpty() || quiz.isEmpty() || act.isEmpty() || lab.isEmpty() || exam.isEmpty()) {
             JOptionPane.showMessageDialog(this,

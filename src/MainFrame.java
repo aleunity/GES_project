@@ -154,7 +154,9 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_profileActionPerformed
 
     private void student_gradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_student_gradeActionPerformed
-        // TODO add your handling code here:
+        main_desktop.removeAll();
+        studentgradeoutput enrollstudentI = new studentgradeoutput();
+        main_desktop.add(enrollstudentI).setVisible(true);
     }//GEN-LAST:event_student_gradeActionPerformed
 
     private void grade_encodingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grade_encodingActionPerformed
@@ -199,7 +201,7 @@ public class MainFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainFrame().setVisible(true);
+                new MainFrame().setVisible(true); 
             }
         });
     }

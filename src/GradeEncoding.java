@@ -1,3 +1,12 @@
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.Vector;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -25,36 +34,44 @@ public class GradeEncoding extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        FacName = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jButton6 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        javax.swing.JPanel jPanel1 = new javax.swing.JPanel();
+        javax.swing.JButton jButton3 = new javax.swing.JButton();
+        javax.swing.JButton jButton1 = new javax.swing.JButton();
+        javax.swing.JButton jButton4 = new javax.swing.JButton();
+        javax.swing.JButton jButton5 = new javax.swing.JButton();
+        javax.swing.JButton jButton2 = new javax.swing.JButton();
+        javax.swing.JLabel jLabel1 = new javax.swing.JLabel();
+        javax.swing.JPanel jPanel2 = new javax.swing.JPanel();
+        javax.swing.JPanel jPanel3 = new javax.swing.JPanel();
+        javax.swing.JLabel FacName = new javax.swing.JLabel();
+        javax.swing.JPanel jPanel4 = new javax.swing.JPanel();
+        tfExam = new javax.swing.JTextField();
+        javax.swing.JLabel jLabel3 = new javax.swing.JLabel();
+        tfName = new javax.swing.JTextField();
+        javax.swing.JLabel jLabel4 = new javax.swing.JLabel();
+        tfStudent = new javax.swing.JTextField();
+        javax.swing.JLabel jLabel5 = new javax.swing.JLabel();
+        javax.swing.JLabel jLabel6 = new javax.swing.JLabel();
+        javax.swing.JLabel jLabel7 = new javax.swing.JLabel();
+        javax.swing.JLabel jLabel8 = new javax.swing.JLabel();
+        tfQuiz = new javax.swing.JTextField();
+        tfAct = new javax.swing.JTextField();
+        tfLab = new javax.swing.JTextField();
+        javax.swing.JButton btnAdd = new javax.swing.JButton();
+        javax.swing.JScrollPane jScrollPane1 = new javax.swing.JScrollPane();
+        tableGrades = new javax.swing.JTable();
+        javax.swing.JButton btnDel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Grade Encoding");
-        setMinimumSize(new java.awt.Dimension(0, 0));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(185, 230, 231));
@@ -148,34 +165,37 @@ public class GradeEncoding extends javax.swing.JFrame {
         jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        tfExam.setFont(new java.awt.Font("Papyrus", 0, 14)); // NOI18N
+        tfExam.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                tfExamActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, 190, 34));
+        jPanel4.add(tfExam, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, 190, 34));
 
         jLabel3.setFont(new java.awt.Font("Papyrus", 1, 18)); // NOI18N
         jLabel3.setText("Activity:");
         jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, -1, -1));
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        tfName.setFont(new java.awt.Font("Papyrus", 0, 14)); // NOI18N
+        tfName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                tfNameActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 190, 34));
+        jPanel4.add(tfName, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 190, 34));
 
         jLabel4.setFont(new java.awt.Font("Papyrus", 1, 18)); // NOI18N
         jLabel4.setText("Name:");
         jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        tfStudent.setFont(new java.awt.Font("Papyrus", 0, 14)); // NOI18N
+        tfStudent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                tfStudentActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 190, 34));
+        jPanel4.add(tfStudent, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 190, 34));
 
         jLabel5.setFont(new java.awt.Font("Papyrus", 1, 18)); // NOI18N
         jLabel5.setText("Written Exam:");
@@ -193,55 +213,61 @@ public class GradeEncoding extends javax.swing.JFrame {
         jLabel8.setText("Quiz:");
         jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, -1, -1));
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        tfQuiz.setFont(new java.awt.Font("Papyrus", 0, 14)); // NOI18N
+        tfQuiz.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                tfQuizActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 190, 34));
+        jPanel4.add(tfQuiz, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 190, 34));
 
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        tfAct.setFont(new java.awt.Font("Papyrus", 0, 14)); // NOI18N
+        tfAct.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                tfActActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 190, 34));
+        jPanel4.add(tfAct, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 190, 34));
 
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        tfLab.setFont(new java.awt.Font("Papyrus", 0, 14)); // NOI18N
+        tfLab.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                tfLabActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, 190, 34));
+        jPanel4.add(tfLab, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, 190, 34));
 
-        jButton6.setFont(new java.awt.Font("Salina", 1, 12)); // NOI18N
-        jButton6.setText("Add");
-        jPanel4.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 530, -1, 30));
+        btnAdd.setFont(new java.awt.Font("Salina", 1, 12)); // NOI18N
+        btnAdd.setText("Add");
+        btnAdd.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddActionPerformed(evt);
+            }
+        });
+        jPanel4.add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 530, 60, 30));
 
-        jTable1.setBackground(new java.awt.Color(204, 204, 255));
-        jTable1.setFont(new java.awt.Font("Perpetua Titling MT", 0, 12)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tableGrades.setBackground(new java.awt.Color(204, 204, 255));
+        tableGrades.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        tableGrades.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+
             },
             new String [] {
-                "Name", "Student #", "Quiz", "Activity", "Lab. Exam", "Written Exam"
+                "Name", "Student #", "Quiz", "Activity", "Lab. Exam", "Written Exam", "Total Grade"
             }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Integer.class, java.lang.Float.class, java.lang.Float.class, java.lang.Float.class, java.lang.Float.class
-            };
+        ));
+        tableGrades.setOpaque(false);
+        jScrollPane1.setViewportView(tableGrades);
 
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
+        btnDel.setFont(new java.awt.Font("Salina", 1, 12)); // NOI18N
+        btnDel.setText("Delete");
+        btnDel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnDel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDelActionPerformed(evt);
             }
         });
-        jTable1.setOpaque(false);
-        jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -254,8 +280,10 @@ public class GradeEncoding extends javax.swing.JFrame {
                 .addGap(16, 16, 16)
                 .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 525, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 558, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDel, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -264,7 +292,10 @@ public class GradeEncoding extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnDel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 31, Short.MAX_VALUE))
         );
 
@@ -293,56 +324,138 @@ public class GradeEncoding extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void tfExamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfExamActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_tfExamActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void tfNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_tfNameActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void tfStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfStudentActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_tfStudentActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void tfQuizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfQuizActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_tfQuizActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void tfActActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfActActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_tfActActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void tfLabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfLabActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_tfLabActionPerformed
+
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+        String name = tfName.getText();
+        String number = tfStudent.getText();
+        String quiz = tfQuiz.getText();
+        String act = tfAct.getText();
+        String lab = tfLab.getText();
+        String exam = tfExam.getText();
+        
+    
+        if (name.isEmpty() || number.isEmpty() || quiz.isEmpty() || act.isEmpty() || lab.isEmpty() || exam.isEmpty()) {
+        JOptionPane.showMessageDialog(this,
+                                "Please enter all fields.",
+                                "Try again!",
+                                JOptionPane.ERROR_MESSAGE);
+        } else {
+        try {
+            // Convert Strings to doubles for computation
+            double quizScore = Double.parseDouble(quiz);
+            double actScore = Double.parseDouble(act);
+            double labScore = Double.parseDouble(lab);
+            double examScore = Double.parseDouble(exam);
+            
+            // Compute the total grade
+            double tQuiz = (quizScore * 0.10);
+            double tAct = (actScore * 0.10);
+            double tLab = (labScore * 0.30);
+            double tExam = (examScore * 0.50);
+            double totalGrade = (quizScore * 0.10) + (actScore * 0.10) + (labScore * 0.30) + (examScore * 0.50);
+            
+            // Add the data including totalGrade to the table
+            DefaultTableModel model = (DefaultTableModel) tableGrades.getModel();
+            model.addRow(new Object[]{name, number, tQuiz, tAct, tLab, tExam, totalGrade});
+            
+            // Clear text fields
+            tfName.setText("");
+            tfStudent.setText("");
+            tfQuiz.setText("");
+            tfAct.setText("");
+            tfLab.setText("");
+            tfExam.setText("");
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this,
+                                    "Please enter valid numerical values for quiz, act, lab, and exam.",
+                                    "Invalid Input!",
+                                    JOptionPane.ERROR_MESSAGE);
+        }
+    }    
+    }//GEN-LAST:event_btnAddActionPerformed
+    
+    private void btnDelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDelActionPerformed
+        int row = tableGrades.getSelectedRow();
+        
+        if (row < 0) {
+            JOptionPane.showMessageDialog(this,
+                                    "No row is selected! Please select one row.",
+                                    "Select row!",
+                                    JOptionPane.ERROR_MESSAGE);
+        } else {
+            DefaultTableModel model = (DefaultTableModel) tableGrades.getModel();
+            model.removeRow(row);
+        }
+    }//GEN-LAST:event_btnDelActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        DefaultTableModel model = (DefaultTableModel) tableGrades.getModel();
+        Vector<Vector> tableData = model.getDataVector();
+        
+        //Saving of object in a file
+        try {
+            FileOutputStream file = new FileOutputStream("file.bin");
+            ObjectOutputStream output = new ObjectOutputStream(file);
+            
+            //Method for serialization of object
+            output.writeObject(tableData);
+            
+            output.close();
+            file.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+           
+        }
+    }//GEN-LAST:event_formWindowClosing
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        try {
+            FileInputStream file = new FileInputStream("file.bin");
+            ObjectInputStream input = new ObjectInputStream(file);
+            //Method for deserialization of object
+            Vector<Vector> tableData = (Vector<Vector>)input.readObject();
+            
+            input.close();
+            file.close();
+            
+            DefaultTableModel model = (DefaultTableModel) tableGrades.getModel();
+            for (int i = 0; i < tableData.size(); i++) {
+                Vector row = tableData.get(i);
+                model.addRow(new Object[]{row.get(0), row.get(1), row.get(2), row.get(3), row.get(4), row.get(5)});
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }//GEN-LAST:event_formWindowOpened
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GradeEncoding.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GradeEncoding.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GradeEncoding.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GradeEncoding.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+      
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -353,31 +466,12 @@ public class GradeEncoding extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel FacName;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTable tableGrades;
+    private javax.swing.JTextField tfAct;
+    private javax.swing.JTextField tfExam;
+    private javax.swing.JTextField tfLab;
+    private javax.swing.JTextField tfName;
+    private javax.swing.JTextField tfQuiz;
+    private javax.swing.JTextField tfStudent;
     // End of variables declaration//GEN-END:variables
 }

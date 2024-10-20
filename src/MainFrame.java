@@ -150,7 +150,10 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_log_outActionPerformed
 
     private void profileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_profileActionPerformed
-        // TODO add your handling code here:
+    MyProfile prof = new MyProfile();
+    setVisible(false);
+    prof.setVisible(true);
+   // TODO add your handling code here:
     }//GEN-LAST:event_profileActionPerformed
 
     private void student_gradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_student_gradeActionPerformed

@@ -9,13 +9,12 @@
  */
 public class MyProfile extends javax.swing.JFrame {
 
-    /**
-     * Creates new form MyProfile
-     */
+    
     public MyProfile() {
         initComponents();
+        
     }
-
+   
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,6 +29,13 @@ public class MyProfile extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        faculty = new javax.swing.JLabel();
+        number = new javax.swing.JLabel();
+        email = new javax.swing.JLabel();
+        lupa = new javax.swing.JLabel();
+        mobile = new javax.swing.JLabel();
+        birth = new javax.swing.JLabel();
+        department = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -44,7 +50,7 @@ public class MyProfile extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
+        home = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jTextField7 = new javax.swing.JTextField();
@@ -99,6 +105,27 @@ public class MyProfile extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 210, -1));
+
+        faculty.setText(".");
+        jPanel1.add(faculty, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 260, -1, -1));
+
+        number.setText(".");
+        jPanel1.add(number, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 350, -1, -1));
+
+        email.setText(".");
+        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 340, -1, -1));
+
+        lupa.setText(".");
+        jPanel1.add(lupa, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 630, -1, -1));
+
+        mobile.setText(".");
+        jPanel1.add(mobile, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 420, -1, -1));
+
+        birth.setText(".");
+        jPanel1.add(birth, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 490, -1, -1));
+
+        department.setText(".");
+        jPanel1.add(department, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 500, -1, -1));
 
         jButton6.setBackground(new java.awt.Color(204, 204, 255));
         jButton6.setFont(new java.awt.Font("Papyrus", 1, 12)); // NOI18N
@@ -193,15 +220,15 @@ public class MyProfile extends javax.swing.JFrame {
         });
         jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 490, 180, 30));
 
-        jTextField6.setBackground(new java.awt.Color(185, 230, 231));
-        jTextField6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTextField6.setOpaque(true);
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        home.setBackground(new java.awt.Color(185, 230, 231));
+        home.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        home.setOpaque(true);
+        home.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                homeActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 590, 220, 110));
+        jPanel1.add(home, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 590, 220, 110));
 
         jLabel9.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jLabel9.setText("MOBILE NO.");
@@ -297,9 +324,9 @@ public class MyProfile extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField5ActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_homeActionPerformed
 
     private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
         // TODO add your handling code here:
@@ -349,6 +376,11 @@ public class MyProfile extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JLabel birth;
+    public javax.swing.JLabel department;
+    public javax.swing.JLabel email;
+    public javax.swing.JLabel faculty;
+    private javax.swing.JTextField home;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
@@ -370,9 +402,11 @@ public class MyProfile extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    public javax.swing.JLabel lupa;
+    public javax.swing.JLabel mobile;
+    public javax.swing.JLabel number;
     // End of variables declaration//GEN-END:variables
 }

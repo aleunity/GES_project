@@ -109,7 +109,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         student_grade.setBackground(new java.awt.Color(204, 204, 255));
         student_grade.setFont(new java.awt.Font("Papyrus", 1, 12)); // NOI18N
-        student_grade.setText("Student Grade");
+        student_grade.setText("Schedule ");
         student_grade.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         student_grade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

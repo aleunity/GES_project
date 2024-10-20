@@ -14,6 +14,8 @@ public class MainFrame extends javax.swing.JFrame {
      */
     public MainFrame() {
         initComponents();
+        
+        
     }
 
     /**
@@ -26,17 +28,15 @@ public class MainFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        enroll_student = new javax.swing.JButton();
+        grade_encoding = new javax.swing.JButton();
+        student_grade = new javax.swing.JButton();
+        profile = new javax.swing.JButton();
+        log_out = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         FacName = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        main_desktop = new javax.swing.JDesktopPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Home Page");
@@ -44,60 +44,60 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(185, 230, 231));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton3.setBackground(new java.awt.Color(204, 204, 255));
-        jButton3.setFont(new java.awt.Font("Papyrus", 1, 12)); // NOI18N
-        jButton3.setText("Enrolled Students");
-        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        enroll_student.setBackground(new java.awt.Color(204, 204, 255));
+        enroll_student.setFont(new java.awt.Font("Papyrus", 1, 12)); // NOI18N
+        enroll_student.setText("Enrolled Students");
+        enroll_student.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        enroll_student.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                enroll_studentActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 210, -1));
+        jPanel1.add(enroll_student, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 210, -1));
 
-        jButton1.setBackground(new java.awt.Color(204, 204, 255));
-        jButton1.setFont(new java.awt.Font("Papyrus", 1, 12)); // NOI18N
-        jButton1.setText("Grade Encoding");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        grade_encoding.setBackground(new java.awt.Color(204, 204, 255));
+        grade_encoding.setFont(new java.awt.Font("Papyrus", 1, 12)); // NOI18N
+        grade_encoding.setText("Grade Encoding");
+        grade_encoding.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        grade_encoding.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                grade_encodingActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 210, -1));
+        jPanel1.add(grade_encoding, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 210, -1));
 
-        jButton4.setBackground(new java.awt.Color(204, 204, 255));
-        jButton4.setFont(new java.awt.Font("Papyrus", 1, 12)); // NOI18N
-        jButton4.setText("Student Grade");
-        jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        student_grade.setBackground(new java.awt.Color(204, 204, 255));
+        student_grade.setFont(new java.awt.Font("Papyrus", 1, 12)); // NOI18N
+        student_grade.setText("Student Grade");
+        student_grade.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        student_grade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                student_gradeActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 210, -1));
+        jPanel1.add(student_grade, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 210, -1));
 
-        jButton5.setBackground(new java.awt.Color(204, 204, 255));
-        jButton5.setFont(new java.awt.Font("Papyrus", 1, 12)); // NOI18N
-        jButton5.setText("My Profile");
-        jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        profile.setBackground(new java.awt.Color(204, 204, 255));
+        profile.setFont(new java.awt.Font("Papyrus", 1, 12)); // NOI18N
+        profile.setText("My Profile");
+        profile.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        profile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                profileActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, 210, -1));
+        jPanel1.add(profile, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, 210, -1));
 
-        jButton2.setBackground(new java.awt.Color(204, 204, 255));
-        jButton2.setFont(new java.awt.Font("Papyrus", 1, 12)); // NOI18N
-        jButton2.setText("LOG OUT");
-        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        log_out.setBackground(new java.awt.Color(204, 204, 255));
+        log_out.setFont(new java.awt.Font("Papyrus", 1, 12)); // NOI18N
+        log_out.setText("LOG OUT");
+        log_out.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        log_out.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                log_outActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 570, 210, -1));
+        jPanel1.add(log_out, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 570, 210, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/SIDE.png"))); // NOI18N
         jLabel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -114,7 +114,7 @@ public class MainFrame extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(FacName, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 486, Short.MAX_VALUE))
+                .addGap(0, 496, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,42 +123,47 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, 880, 50));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, 890, 50));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Screenshot 2024-10-18 at 13-58-48 LOG IN - Medium Banner (US) (Landscape).png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 190, -1, 120));
+        javax.swing.GroupLayout main_desktopLayout = new javax.swing.GroupLayout(main_desktop);
+        main_desktop.setLayout(main_desktopLayout);
+        main_desktopLayout.setHorizontalGroup(
+            main_desktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 890, Short.MAX_VALUE)
+        );
+        main_desktopLayout.setVerticalGroup(
+            main_desktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 660, Short.MAX_VALUE)
+        );
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
-        jLabel3.setText("HELL UNIVERSITY");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 100, 460, 70));
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LASTT.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 460, -1, -1));
+        jPanel1.add(main_desktop, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 50, 890, 660));
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void log_outActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_log_outActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_log_outActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void profileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_profileActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_profileActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void student_gradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_student_gradeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_student_gradeActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    private void grade_encodingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grade_encodingActionPerformed
+       
+    }//GEN-LAST:event_grade_encodingActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void enroll_studentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enroll_studentActionPerformed
+        main_desktop.removeAll();
+        inputstudentenroll enrollstudentI = new inputstudentenroll();
+        main_desktop.add(enrollstudentI).setVisible(true);
+    }//GEN-LAST:event_enroll_studentActionPerformed
 
     /**
      * @param args the command line arguments
@@ -197,16 +202,14 @@ public class MainFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel FacName;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton enroll_student;
+    private javax.swing.JButton grade_encoding;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JButton log_out;
+    private javax.swing.JDesktopPane main_desktop;
+    private javax.swing.JButton profile;
+    private javax.swing.JButton student_grade;
     // End of variables declaration//GEN-END:variables
 }

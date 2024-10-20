@@ -14,6 +14,8 @@ public class GradeEncoding extends javax.swing.JFrame {
      */
     public GradeEncoding() {
         initComponents();
+        
+        
     }
 
     /**
@@ -54,7 +56,6 @@ public class GradeEncoding extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Grade Encoding");
-        setMinimumSize(new java.awt.Dimension(0, 0));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(185, 230, 231));
@@ -314,7 +315,10 @@ public class GradeEncoding extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField5ActionPerformed
 
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
-        // TODO add your handling code here:
+        int lab_exam;
+        int overall_score;
+        
+        
     }//GEN-LAST:event_jTextField6ActionPerformed
 
     /**
